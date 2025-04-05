@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio Kayk Solera</title>
-    <script async src="//www.instagram.com/embed.js"></script>
     <style>
         body {
             margin: 0;
@@ -25,7 +24,7 @@
             letter-spacing: 1px;
         }
         section {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
             padding: 2rem 1rem;
         }
@@ -37,26 +36,39 @@
         }
         .video-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
             margin-top: 1rem;
         }
-        .insta {
-            background: #181818;
-            padding: 1rem;
+        .thumb {
+            position: relative;
+            overflow: hidden;
             border-radius: 12px;
+            transition: transform 0.3s ease;
         }
-        iframe {
+        .thumb:hover {
+            transform: scale(1.03);
+        }
+        .thumb img {
             width: 100%;
-            border: none;
+            display: block;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(255, 111, 97, 0.2);
         }
         .bio {
             background: #111;
             padding: 2rem;
             border-radius: 12px;
             margin-top: 2rem;
+        }
+        .thumb::after {
+            content: "▶";
+            position: absolute;
+            font-size: 48px;
+            color: rgba(255,255,255,0.8);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
         }
     </style>
 </head>
@@ -68,40 +80,39 @@
     <section>
         <h2>Eventos e Empresas</h2>
         <div class="video-grid">
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C53yDA1POMq/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DDwoh5Oxcka/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHmIWL0PVDm/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DGOzLvqMHAs/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CvLMta6JyqE/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CvSbZM3MOzc/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Cul_vOjupd7/" data-instgrm-version="14"></blockquote>
-            </div>
-            <div class="insta">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CkO59XZJdfP/" data-instgrm-version="14"></blockquote>
-            </div>
-        </div>
-    </section>
 
-    <section>
-        <h2>Casamentos, 15 anos e Pre-Wedding</h2>
-        <div class="video-grid">
-            <iframe src="https://www.youtube.com/embed/ARA2339r594" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/4-x_PTLUNXg" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/Qfg3xy6s0XI" allowfullscreen></iframe>
-            <iframe src="https://www.youtube.com/embed/IBjDCin_dSU" allowfullscreen></iframe>
+            <a href="https://www.instagram.com/reel/C53yDA1POMq/" target="_blank" class="thumb">
+                <img src="assets/scot.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/DDwoh5Oxcka/" target="_blank" class="thumb">
+                <img src="assets/credicitrus.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/DHmIWL0PVDm/" target="_blank" class="thumb">
+                <img src="assets/spark.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/DGOzLvqMHAs/" target="_blank" class="thumb">
+                <img src="assets/cafeteria.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/CvLMta6JyqE/" target="_blank" class="thumb">
+                <img src="assets/coopercitrus1.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/CvSbZM3MOzc/" target="_blank" class="thumb">
+                <img src="assets/coopercitrus2.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/Cul_vOjupd7/" target="_blank" class="thumb">
+                <img src="assets/beer.jpg" alt="Vídeo">
+            </a>
+    
+            <a href="https://www.instagram.com/reel/CkO59XZJdfP/" target="_blank" class="thumb">
+                <img src="assets/michel.jpg" alt="Vídeo">
+            </a>
+    
         </div>
     </section>
 
@@ -109,7 +120,5 @@
         <h2>Sobre mim</h2>
         <p>Sou Kayk Solera, filmmaker e editor de vídeo com foco em vídeos para eventos, empresas e redes sociais. Já trabalhei com marcas como Scot Consultoria, Coopercitrus, Sicredi e Spark Assessoria. Tenho experiência com edição em Premiere, After Effects e Photoshop, além de fluência em inglês. Atualmente atuo na Spark como filmmaker, com dedicação à produção audiovisual de ponta e um olhar artístico que transforma ideias em imagens com impacto.</p>
     </section>
-
-    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
